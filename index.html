@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hôtel-Dieu de Tonnerre - Un projet de Tous au Château - Bientôt disponible">
+    <title>Hôtel-Dieu de Tonnerre - Bientôt</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'main-light': {
+                            50: '#fcf9f0',
+                            100: '#f8f2dc',
+                            200: '#f1e2b7',
+                            300: '#e8ce89',
+                            400: '#e0b768',
+                            500: '#d5993a',
+                            600: '#c7832f',
+                            700: '#a66728',
+                            800: '#855327',
+                            900: '#6b4423',
+                            950: '#3a2210',
+                            DEFAULT: '#e0b768',
+                        },
+                        'main-dark': {
+                            50: '#f2f8f9',
+                            100: '#deeaef',
+                            200: '#c1d8e0',
+                            300: '#96bbca',
+                            400: '#6497ac',
+                            500: '#497b91',
+                            600: '#3f657b',
+                            700: '#385466',
+                            800: '#344856',
+                            900: '#2f3e4a',
+                            950: '#1b2731',
+                            DEFAULT: '#344856',
+                        },
+                    },
+                    fontFamily: {
+                        'heading': ['"Playfair Display"', 'serif'],
+                        'body': ['Raleway', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+        }
+        
+        .elegant-border {
+            position: relative;
+        }
+        
+        .elegant-border::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #e0b768, transparent);
+        }
+        
+        .elegant-border::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #e0b768, transparent);
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        
+        .delay-1 {
+            animation-delay: 0.2s;
+            opacity: 0;
+        }
+        
+        .delay-2 {
+            animation-delay: 0.4s;
+            opacity: 0;
+        }
+        
+        .delay-3 {
+            animation-delay: 0.6s;
+            opacity: 0;
+        }
+        
+        .delay-4 {
+            animation-delay: 0.8s;
+            opacity: 0;
+        }
+        
+        .ornament {
+            display: inline-block;
+            margin: 0 1rem;
+            color: #e0b768;
+            font-size: 1.5rem;
+        }
+        
+        .lang-hidden {
+            display: none;
+        }
+        
+        .lang-btn {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .lang-btn.active {
+            color: #e0b768;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-main-dark-900 via-main-dark-800 to-main-dark-950 min-h-screen flex items-center justify-center p-4 py-12">
+    
+    <!-- Language Switcher -->
+    <div class="fixed top-6 right-6 z-50 flex gap-2 text-main-dark-200">
+        <button class="lang-btn active" data-lang="fr">FR</button>
+        <span class="text-main-dark-400">|</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+    
+    <div class="max-w-5xl w-full">
+        <!-- Logo / Brand Section -->
+        <div class="fade-in mb-12 text-center">
+            <div class="inline-block">
+                <p class="text-main-light-400 text-sm tracking-widest uppercase mb-2 font-light" data-i18n="branding">Un projet de</p>
+                <h2 class="text-main-light-300 text-2xl md:text-3xl font-heading font-semibold tracking-wide">Tous au Château</h2>
+            </div>
+        </div>
+        
+        <!-- Main Title -->
+        <div class="fade-in delay-1 mb-16 text-center">
+            <div class="elegant-border inline-block py-8 px-4">
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-heading font-bold text-white mb-4">
+                    Hôtel-Dieu
+                    <span class="text-main-light-400">de</span>
+                    <br>
+                    Tonnerre
+                </h1>
+            </div>
+        </div>
+        
+        <!-- Coming Soon Message -->
+        <div class="fade-in delay-2 mb-12 text-center">
+            <div class="flex items-center justify-center mb-6">
+                <span class="ornament">❖</span>
+                <p class="text-2xl md:text-3xl text-main-light-200 font-light tracking-wide" data-i18n="coming-soon">
+                    Bientôt
+                </p>
+                <span class="ornament">❖</span>
+            </div>
+            <p class="text-lg md:text-xl text-main-dark-200 font-light max-w-2xl mx-auto leading-relaxed" data-i18n="subtitle">
+                Un monument historique exceptionnel du XIIIe siècle se prépare à vous accueillir.
+            </p>
+        </div>
+        
+        <!-- Historical Content -->
+        <div class="fade-in delay-3 mt-16 max-w-4xl mx-auto">
+            <!-- Quote Section -->
+            <div class="bg-main-dark-900/50 border border-main-light-400/20 rounded-lg p-8 mb-12 backdrop-blur-sm">
+                <div class="text-center mb-6">
+                    <h3 class="text-main-light-400 text-xl md:text-2xl font-heading mb-6" data-i18n="history-title">Histoire</h3>
+                </div>
+                <blockquote class="italic text-main-dark-100 text-base md:text-lg leading-relaxed mb-4 text-center">
+                    <span data-i18n="quote-text">
+                        « Nous, Marguerite, par la grâce de Dieu, Reine de Jérusalem et de Sicile, Comtesse de Tonnerre (...) fondons un Hôpital ou Maison-Dieu, et l'établissons dans Tonnerre, en la rue ou lieudit des Fontenilles (...). »
+                    </span>
+                </blockquote>
+                <p class="text-main-dark-300 text-sm text-center" data-i18n="quote-source">
+                    Extrait de la charte de Fondation
+                </p>
+            </div>
+            
+            <!-- Historical Text -->
+            <div class="space-y-6 text-main-dark-100 text-base md:text-lg leading-relaxed">
+                <p data-i18n="history-p1">
+                    L'hôtel-Dieu de Tonnerre est un ancien établissement hospitalier, aujourd'hui musée, fondé en <strong class="text-main-light-300">1293 par Marguerite de Bourgogne</strong> dans la ville de Tonnerre, en Bourgogne.
+                </p>
+                
+                <p data-i18n="history-p2" class="text-center font-semibold text-main-light-400 text-xl">
+                    Le plus long hôpital médiéval d'Europe et l'un des plus anciens.
+                </p>
+                
+                <p data-i18n="history-p3">
+                    En 1293, <strong class="text-main-light-300">Marguerite de Bourgogne</strong>, comtesse de Tonnerre, veuve de Charles d'Anjou, belle-sœur de saint Louis, lance la construction de l'Hôtel-Dieu au cœur du chef-lieu de son comté : Tonnerre.
+                </p>
+                
+                <p data-i18n="history-p4">
+                    Elle met à la disposition des bâtisseurs des moyens financiers conséquents, ainsi que les carrières et les bois de Maulnes à proximité, des châtaigniers de Puisaye et une forêt du nord de Paris, permettant ainsi d'achever l'édifice en deux ans.
+                </p>
+                
+                <p data-i18n="history-p5">
+                    En <strong class="text-main-light-300">1295</strong>, l'Hôtel-Dieu accueille ses premiers patients dans quelques quarante lits. Marguerite de Bourgogne elle-même prodiguera des soins aux malades, donnant l'exemple des « œuvres de la miséricorde » qu'elle souhaite voir exercer dans l'établissement hospitalier qu'elle a fondé.
+                </p>
+                
+                <p data-i18n="history-p6">
+                    Aujourd'hui l'Hôtel-Dieu appartient encore au Centre Hospitalier de Tonnerre. En <strong class="text-main-light-300">2021</strong>, le Centre Hospitalier confie la gestion de ce bâtiment hors normes à la société <strong class="text-main-light-400">Tous Au Château</strong> pour dynamiser sa fréquentation et renouveler la façon de découvrir son histoire.
+                </p>
+            </div>
+        </div>
+        
+        <!-- CTA Section -->
+        <div class="fade-in delay-4 mt-16 text-center">
+            <div class="inline-block">
+                <a href="https://www.tousauchateau.com/" 
+                   class="inline-block px-8 py-3 bg-main-light-400 hover:bg-main-light-300 text-main-dark-950 font-semibold tracking-wide transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                   data-i18n="cta-button">
+                    Découvrir Tous au Château
+                </a>
+            </div>
+            
+            <div class="mt-12 text-main-dark-300 text-sm">
+                <p>
+                    <span data-i18n="contact-prefix">Pour plus d'informations :</span>
+                    <a href="mailto:contact@tousauchateau.com" class="text-main-light-400 hover:text-main-light-300 underline ml-1">
+                        contact@tousauchateau.fr
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // i18n translations
+        const translations = {
+            fr: {
+                'branding': 'Un projet de',
+                'coming-soon': 'Bientôt',
+                'subtitle': 'Un monument historique exceptionnel du XIIIe siècle se prépare à vous accueillir.',
+                'history-title': 'Histoire',
+                'quote-text': '« Nous, Marguerite, par la grâce de Dieu, Reine de Jérusalem et de Sicile, Comtesse de Tonnerre (...) fondons un Hôpital ou Maison-Dieu, et l\'établissons dans Tonnerre, en la rue ou lieudit des Fontenilles (...). »',
+                'quote-source': 'Extrait de la charte de Fondation',
+                'history-p1': 'L\'hôtel-Dieu de Tonnerre est un ancien établissement hospitalier, aujourd\'hui musée, fondé en <strong class="text-main-light-300">1293 par Marguerite de Bourgogne</strong> dans la ville de Tonnerre, en Bourgogne.',
+                'history-p2': 'Le plus long hôpital médiéval d\'Europe et l\'un des plus anciens.',
+                'history-p3': 'En 1293, <strong class="text-main-light-300">Marguerite de Bourgogne</strong>, comtesse de Tonnerre, veuve de Charles d\'Anjou, belle-sœur de saint Louis, lance la construction de l\'Hôtel-Dieu au cœur du chef-lieu de son comté : Tonnerre.',
+                'history-p4': 'Elle met à la disposition des bâtisseurs des moyens financiers conséquents, ainsi que les carrières et les bois de Maulnes à proximité, des châtaigniers de Puisaye et une forêt du nord de Paris, permettant ainsi d\'achever l\'édifice en deux ans.',
+                'history-p5': 'En <strong class="text-main-light-300">1295</strong>, l\'Hôtel-Dieu accueille ses premiers patients dans quelques quarante lits. Marguerite de Bourgogne elle-même prodiguera des soins aux malades, donnant l\'exemple des « œuvres de la miséricorde » qu\'elle souhaite voir exercer dans l\'établissement hospitalier qu\'elle a fondé.',
+                'history-p6': 'Aujourd\'hui l\'Hôtel-Dieu appartient encore au Centre Hospitalier de Tonnerre. En <strong class="text-main-light-300">2021</strong>, le Centre Hospitalier confie la gestion de ce bâtiment hors normes à la société <strong class="text-main-light-400">Tous Au Château</strong> pour dynamiser sa fréquentation et renouveler la façon de découvrir son histoire.',
+                'cta-button': 'Découvrir Tous au Château',
+                'contact-prefix': 'Pour plus d\'informations :'
+            },
+            en: {
+                'branding': 'A project by',
+                'coming-soon': 'Coming Soon',
+                'subtitle': 'An exceptional 13th-century historical monument is preparing to welcome you.',
+                'history-title': 'History',
+                'quote-text': '"We, Marguerite, by the grace of God, Queen of Jerusalem and Sicily, Countess of Tonnerre (...) found a Hospital or Hôtel-Dieu, and establish it in Tonnerre, in the street or place called des Fontenilles (...)."',
+                'quote-source': 'Extract from the Foundation Charter',
+                'history-p1': 'The Hôtel-Dieu de Tonnerre is a former hospital establishment, now a museum, founded in <strong class="text-main-light-300">1293 by Marguerite de Bourgogne</strong> in the town of Tonnerre, Burgundy.',
+                'history-p2': 'The longest medieval hospital in Europe and one of the oldest.',
+                'history-p3': 'In 1293, <strong class="text-main-light-300">Marguerite de Bourgogne</strong>, Countess of Tonnerre, widow of Charles of Anjou, sister-in-law of Saint Louis, began construction of the Hôtel-Dieu in the heart of her county seat: Tonnerre.',
+                'history-p4': 'She provided builders with substantial financial resources, as well as quarries and wood from nearby Maulnes, chestnuts from Puisaye, and a forest north of Paris, allowing the building to be completed in two years.',
+                'history-p5': 'In <strong class="text-main-light-300">1295</strong>, the Hôtel-Dieu welcomed its first patients in about forty beds. Marguerite de Bourgogne herself would provide care to the sick, setting an example of the "works of mercy" she wished to see practiced in the hospital she had founded.',
+                'history-p6': 'Today, the Hôtel-Dieu still belongs to the Tonnerre Hospital Center. In <strong class="text-main-light-300">2021</strong>, the Hospital Center entrusted the management of this extraordinary building to <strong class="text-main-light-400">Tous Au Château</strong> to boost its attendance and renew the way its history is discovered.',
+                'cta-button': 'Discover Tous au Château',
+                'contact-prefix': 'For more information:'
+            }
+        };
+        
+        // Initialize with French as default
+        let currentLang = 'fr';
+        
+        // Language switching function
+        function switchLanguage(lang) {
+            currentLang = lang;
+            
+            // Update all translatable elements
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+            
+            // Update active language button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if (btn.getAttribute('data-lang') === lang) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = lang;
+        }
+        
+        // Add event listeners to language buttons
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                switchLanguage(btn.getAttribute('data-lang'));
+            });
+        });
+    </script>
+    
+</body>
+</html>
